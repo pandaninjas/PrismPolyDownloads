@@ -1,0 +1,17 @@
+name: Run Program
+
+on: 
+  push:
+  
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  trolling:
+    name: Run GistScript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+      - name: Run it
+        run: cd $GITHUB_WORKSPACE && python -m pip install requests && python main.py

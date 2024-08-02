@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   trolling:
-    name: Run GistScript
+    name: Run
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
